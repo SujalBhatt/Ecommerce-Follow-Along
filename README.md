@@ -25,3 +25,18 @@ Authentication in Web Applications:
 
 User authentication features are required for secure access to resources.
 Verifying the identity of the user in registration and login.
+
+
+## Milestone 2: 
+
+In this milestone, we set up the frontend and backend structure for the e-commerce application. We initialized the React app with Vite, configured Tailwind CSS for styling, and developed a basic login page. This lays the foundation for user-facing features and future backend integration.
+
+Major Points Covered:
+Project Structure: Separated the frontend (React) and backend (Node.js) into distinct directories.
+Frontend Setup: Initialized a React app using Vite for faster development.
+Tailwind CSS: Installed and configured Tailwind for utility-first styling.
+Login Page: Developed a simple login form with fields for email and password, styled using Tailwind.
+Development Server: Used Vite’s server (npm run dev) to run the frontend locally.
+This milestone completed the setup for the frontend, laying the groundwork for future API integration and user authentication.
+
+
