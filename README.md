@@ -53,3 +53,28 @@ Major Points Covered:
 - Basic Routes: Implemented basic routes for user registration and login.
 
 This milestone established the backend foundation, enabling us to build and expand the API endpoints and integrate them with the frontend in future milestones.
+
+
+## Milestone 4: User Model, Controller, and File Uploads  
+
+In this milestone, we expanded the backend functionality by introducing a user management system and enabling file uploads. These enhancements set the stage for building a more interactive and user-friendly application.  
+
+### Major Points Covered:  
+1. **User Model**:  
+   - Defined a schema using Mongoose to structure user data, including fields like name, email, and password.  
+   - Established validation rules for secure and consistent data storage.  
+
+2. **User Controller**:  
+   - Created functions to handle user-related operations, such as registering new users and retrieving user details.  
+   - Organized controller logic to maintain a clean and modular codebase.  
+
+3. **File Uploads with Multer**:  
+   - Integrated Multer middleware to handle file uploads (e.g., profile pictures).  
+   - Configured storage settings to save uploaded files to the server.  
+
+4. **Backend Refinements**:  
+   - Improved code organization by separating logic into dedicated folders for models, controllers, and routes.  
+   - Updated environment variables for secure configuration management.  
+
+This milestone reinforces the backend's robustness by adding essential features like user data handling and file management.  
+
