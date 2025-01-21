@@ -40,3 +40,16 @@ Development Server: Used Vite’s server (npm run dev) to run the frontend local
 This milestone completed the setup for the frontend, laying the groundwork for future API integration and user authentication.
 
 
+
+## Milestone 3: Backend Setup
+
+In this milestone, we focused on setting up the backend structure for the e-commerce application. We created the necessary folders and files to organize our backend code, configured the server, and connected to the MongoDB database.
+
+Major Points Covered:
+- Backend Structure: Created folders for controllers, models, routes, and middleware to organize the backend code.
+- Express Server: Set up an Express.js server to handle API requests.
+- MongoDB Connection: Configured Mongoose to connect to a MongoDB database.
+- Environment Variables: Used dotenv to manage environment variables securely.
+- Basic Routes: Implemented basic routes for user registration and login.
+
+This milestone established the backend foundation, enabling us to build and expand the API endpoints and integrate them with the frontend in future milestones.
