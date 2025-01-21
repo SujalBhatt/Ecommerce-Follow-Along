@@ -27,7 +27,7 @@ User authentication features are required for secure access to resources.
 Verifying the identity of the user in registration and login.
 
 
-## Milestone 2: 
+## Milestone 2: Project Setup and Login Page
 
 In this milestone, we set up the frontend and backend structure for the e-commerce application. We initialized the React app with Vite, configured Tailwind CSS for styling, and developed a basic login page. This lays the foundation for user-facing features and future backend integration.
 
