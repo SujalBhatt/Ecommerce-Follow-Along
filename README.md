@@ -80,11 +80,13 @@ This milestone reinforces the backend's robustness by adding essential features 
 
 
 ## Milestone 5: Sign-Up Page and Validation
+
 🎯 Learning Goals
 By the end of this milestone, you will:
 
 Build the frontend UI for users to register by filling out their details.
 Implement form validation to ensure that user inputs, like email and password, are correct before submission.
+
 🚀 Key Concepts
 What is a Sign-Up Page?
 The Sign-Up page allows users to input their details to create an account. Typical fields include:
@@ -102,6 +104,7 @@ Minimum 6 characters.
 At least one uppercase letter.
 At least one number.
 At least one special character. Form validation prevents errors and ensures the backend receives clean and valid data.
+
 📝 Steps for Milestone 5
 Sign-Up Page Development
 
@@ -113,6 +116,7 @@ Implemented client-side form validation to ensure that:
 The email entered is valid.
 The password meets the required security criteria.
 Displayed clear error messages to guide users through correcting their input.
+
 🎯 Outcome
 At the end of this milestone, the Sign-Up Page is fully functional with proper form validation, ensuring that only valid data is submitted. This enhances the overall user experience and prepares the application for future steps, including backend integration and authentication.
 
@@ -123,8 +127,10 @@ Push your code to the same GitHub repository you’ve used for previous mileston
 Make sure the repository is publicly accessible.
 Update your README file with a section summarizing your progress for Milestone 5.
 Share the repository link in the assignment provided.
+
 🚀 Next Steps
 In the next milestone, we’ll continue to build more advanced features for your app, such as connecting the frontend to the backend and managing user sessions securely. Keep up the great work!
+
 
 
 
