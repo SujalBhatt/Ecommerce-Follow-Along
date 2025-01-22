@@ -120,16 +120,6 @@ Displayed clear error messages to guide users through correcting their input.
 🎯 Outcome
 At the end of this milestone, the Sign-Up Page is fully functional with proper form validation, ensuring that only valid data is submitted. This enhances the overall user experience and prepares the application for future steps, including backend integration and authentication.
 
-📥 Submission Guidelines
-Once you’ve completed this milestone:
-
-Push your code to the same GitHub repository you’ve used for previous milestones.
-Make sure the repository is publicly accessible.
-Update your README file with a section summarizing your progress for Milestone 5.
-Share the repository link in the assignment provided.
-
-🚀 Next Steps
-In the next milestone, we’ll continue to build more advanced features for your app, such as connecting the frontend to the backend and managing user sessions securely. Keep up the great work!
 
 
 
