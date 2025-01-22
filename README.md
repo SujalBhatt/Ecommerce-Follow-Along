@@ -78,3 +78,57 @@ In this milestone, we expanded the backend functionality by introducing a user m
 
 This milestone reinforces the backend's robustness by adding essential features like user data handling and file management.  
 
+
+## Milestone 5: Sign-Up Page and Validation
+🎯 Learning Goals
+By the end of this milestone, you will:
+
+Build the frontend UI for users to register by filling out their details.
+Implement form validation to ensure that user inputs, like email and password, are correct before submission.
+🚀 Key Concepts
+What is a Sign-Up Page?
+The Sign-Up page allows users to input their details to create an account. Typical fields include:
+
+Name
+Email
+Password
+This page will send user information to the server for processing.
+What is Form Validation?
+Form validation ensures that user inputs are correct and in the proper format:
+
+Email format validation ensures the email entered is in the correct format (e.g., user@example.com).
+Password validation checks for:
+Minimum 6 characters.
+At least one uppercase letter.
+At least one number.
+At least one special character. Form validation prevents errors and ensures the backend receives clean and valid data.
+📝 Steps for Milestone 5
+Sign-Up Page Development
+
+Created a user-friendly sign-up form with fields for Name, Email, and Password.
+Styled the form using Tailwind CSS to ensure responsiveness and visual appeal.
+Form Validation Implementation
+
+Implemented client-side form validation to ensure that:
+The email entered is valid.
+The password meets the required security criteria.
+Displayed clear error messages to guide users through correcting their input.
+🎯 Outcome
+At the end of this milestone, the Sign-Up Page is fully functional with proper form validation, ensuring that only valid data is submitted. This enhances the overall user experience and prepares the application for future steps, including backend integration and authentication.
+
+📥 Submission Guidelines
+Once you’ve completed this milestone:
+
+Push your code to the same GitHub repository you’ve used for previous milestones.
+Make sure the repository is publicly accessible.
+Update your README file with a section summarizing your progress for Milestone 5.
+Share the repository link in the assignment provided.
+🚀 Next Steps
+In the next milestone, we’ll continue to build more advanced features for your app, such as connecting the frontend to the backend and managing user sessions securely. Keep up the great work!
+
+
+
+
+
+
+
