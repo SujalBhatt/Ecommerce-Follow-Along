@@ -1,9 +1,9 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-const signUp = require("../controllers/userController")
-const upload = require("../configurations/multer")
 
-router.post("/signup", upload.single("picture"), signUp)
+const signUp = require("../controllers/userController");
 
-module.exports = router
+router.post("/signup", signUp);
+
+module.exports = router;

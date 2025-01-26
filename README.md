@@ -121,10 +121,29 @@ Displayed clear error messages to guide users through correcting their input.
 At the end of this milestone, the Sign-Up Page is fully functional with proper form validation, ensuring that only valid data is submitted. This enhances the overall user experience and prepares the application for future steps, including backend integration and authentication.
 
 
+## Milestone 6: Backend Endpoint for Signup Page
 
+### Objective
+Created a backend endpoint for the signup page to securely store user data in the database. Implemented password encryption to enhance security and ensure compliance with best practices.
 
+### Key Features Implemented
+Password Encryption
 
+Utilized bcrypt to hash user passwords during signup.
+Ensured that only the hashed password is stored in the database, protecting sensitive user data.
+Secure Data Storage
 
+Stored complete user details, including name, email, and hashed password, in the database.
+Maintained strict security standards to prevent unauthorized access.
 
+### Technologies Used
+Node.js
+Express.js
+MongoDB
+bcrypt
 
-
+### Steps Followed
+Set up a POST endpoint /signup in the backend to handle user registrations.
+Used bcrypt.hash() to encrypt passwords before saving them to the database.
+Validated user input to ensure completeness and security.
+Successfully tested the endpoint using Postman/Thunderclient to verify proper functionality.

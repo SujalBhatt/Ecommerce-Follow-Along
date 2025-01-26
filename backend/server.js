@@ -2,7 +2,9 @@ const express = require("express")
 const app = express()
 const connectDB = require("./configurations/db")
 const router = require("./routes/userRoute")
+const cors = require("cors") 
 app.use(express.json())
+app.use(cors())
 
 app.get("/", (req, res) => {
     res.send("API is running")

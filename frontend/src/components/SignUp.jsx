@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const SignUp = () => {
     const [formData, setFormData] = useState({
-        username: '',
+        name: '',
         email: '',
         password: '',
     });
@@ -38,14 +38,30 @@ const SignUp = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (passwordErrors.length === 0) {
-            console.log('Form data submitted:', formData);
-        } else {
-            console.log('Fix errors before submitting:', passwordErrors);
-        }
-    };
+        try {
+            const response = await fetch("http://localhost:4000/api/users/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+
+            if (response.ok) {
+                // Redirect to login page or home page after successful signup
+                window.location.href = "/login";
+            } else {
+                // Handle errors returned from the backend
+                const errorData = await response.json();
+                alert(errorData.message);
+            }
+
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+};
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -54,16 +70,16 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label
-                            htmlFor="username"
+                            htmlFor="name"
                             className="block text-sm font-medium text-gray-700 mb-1"
                         >
-                            Username
+                            Name
                         </label>
                         <input
                             type="text"
-                            id="username"
-                            name="username"
-                            value={formData.username}
+                            id="name"
+                            name="name"
+                            value={formData.name}
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -122,4 +138,6 @@ const SignUp = () => {
     );
 };
 
+
 export default SignUp;
+
