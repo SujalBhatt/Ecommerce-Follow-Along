@@ -4,11 +4,37 @@ import React, { useState } from 'react';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null)
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
+    
+    const userData = {
+      email, 
+      password
+    }
+
+    try {
+      const response = await fetch("http://localhost:4000/api/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userData)
+      })
+
+
+      const data = await response.json()
+      console.log(data)
+      alert(data.message)
+
+
+
+    } catch (err) {
+      setError(err.message)
+      console.error(err.message)
+    }
   };
 
   return (

@@ -147,3 +147,46 @@ Set up a POST endpoint /signup in the backend to handle user registrations.
 Used bcrypt.hash() to encrypt passwords before saving them to the database.
 Validated user input to ensure completeness and security.
 Successfully tested the endpoint using Postman/Thunderclient to verify proper functionality.
+
+
+## Milestone 7: User Authentication and JWT Implementation
+
+### Objective
+Implemented user authentication using JSON Web Tokens (JWT) to manage user sessions securely. This milestone ensures that only authenticated users can access protected routes and perform specific actions within the application.
+
+### Key Features Implemented
+1. **JWT Authentication**:
+   - Generated JWT tokens upon successful user login.
+   - Implemented middleware to verify JWT tokens for protected routes.
+
+2. **Login Endpoint**:
+   - Created a POST endpoint `/login` to authenticate users.
+   - Validated user credentials and generated a JWT token upon successful authentication.
+
+3. **Protected Routes**:
+   - Secured specific routes by requiring a valid JWT token for access.
+   - Implemented middleware to decode and verify tokens, ensuring only authenticated users can proceed.
+
+### Technologies Used
+- Node.js
+- Express.js
+- MongoDB
+- bcrypt
+- jsonwebtoken
+
+### Steps Followed
+1. **Login Endpoint**:
+   - Set up a POST endpoint `/login` to handle user login requests.
+   - Used bcrypt.compare() to verify user passwords.
+   - Generated a JWT token using jsonwebtoken upon successful authentication.
+
+2. **JWT Middleware**:
+   - Created middleware to verify JWT tokens for protected routes.
+   - Decoded tokens to extract user information and validate authenticity.
+
+3. **Protected Routes**:
+   - Applied JWT middleware to routes that require authentication.
+   - Ensured that only users with valid tokens can access these routes.
+
+### Outcome
+At the end of this milestone, the application supports secure user authentication using JWT. This enhances security by ensuring that only authenticated users can access protected resources and perform specific actions. The implementation of JWT tokens also lays the groundwork for future features that require user authentication and authorization.
