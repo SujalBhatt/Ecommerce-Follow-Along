@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", router)
 
+
 connectDB()
 
 app.listen(4000, () => {

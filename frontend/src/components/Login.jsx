@@ -8,7 +8,7 @@ const Login = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     
     const userData = {
       email, 

@@ -28,6 +28,14 @@ const Navigation = () => {
                             Signup
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            to="/home"
+                            className="text-white text-sm font-medium hover:text-gray-200 px-4 py-2 rounded-lg transition-all duration-200"
+                        >
+                            Home
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>

@@ -190,3 +190,5 @@ Implemented user authentication using JSON Web Tokens (JWT) to manage user sessi
 
 ### Outcome
 At the end of this milestone, the application supports secure user authentication using JWT. This enhances security by ensuring that only authenticated users can access protected resources and perform specific actions. The implementation of JWT tokens also lays the groundwork for future features that require user authentication and authorization.
+
+
