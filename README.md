@@ -192,3 +192,57 @@ Implemented user authentication using JSON Web Tokens (JWT) to manage user sessi
 At the end of this milestone, the application supports secure user authentication using JWT. This enhances security by ensuring that only authenticated users can access protected resources and perform specific actions. The implementation of JWT tokens also lays the groundwork for future features that require user authentication and authorization.
 
 
+## Milestone 8: Product Card Component and Display
+
+### Learning Goals
+By the end of this milestone, you will:
+- Learn how to create a card component.
+- Learn how to display those cards on the products page.
+
+### Why Create Card Components?
+- **Showcase Products Effectively**: Presents product details in a clear and visually appealing way.
+- **Reusable Design**: Can be used across multiple pages or sections of the app.
+- **Improved User Experience**: Makes it easy for users to browse and interact with products.
+- **Organized Layout**: Keeps the homepage clean and structured.
+
+### How to Display a Single Card for Multiple Products?
+- **Create a Dynamic Component**: Design a single card component that accepts product details as props.
+- **Use Mapping**: Use array mapping to iterate over the product list and render a card for each product.
+- **Pass Data Dynamically**: Pass unique product information (e.g., name, price, image) to each card.
+- **Maintain Consistency**: Ensure the layout remains uniform for all products.
+
+### Steps for Milestone 8 📝
+1. **Create the Card Component**:
+   - Design a reusable card component with props for product details (e.g., name, image, price).
+
+2. **Design the Homepage Layout**:
+   - Set up a grid layout or flexbox for displaying multiple cards neatly.
+
+### Submission Guidelines 📥
+- Push your code to your GitHub repository.
+- Ensure your repository is publicly accessible.
+- Update the README file to summarize your progress for Milestone 8.
+- Share the repository link in the assignment submission section.
+
+
+## Milestone 9: Product Input Form
+
+### Welcome to Milestone 9! 🌟
+
+Today, we will create a frontend form for taking product inputs. Let’s dive in and understand what this all means!
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Learn how to create a form that will take all the details of a product.
+- Learn how to take multiple images as input.
+
+### Why Create a Product Form?
+Creating a form to input all the details of a product is essential for managing product data. These details will be eventually saved in the database and displayed on the products homepage created in the previous milestone.
+
+### Steps for Milestone 9 📝
+1. **Create the Form for Products**:
+   - Design a form that includes fields for product details such as name, description, price, and category.
+   - Implement functionality to take multiple product images as input.
+
+### Note
+This lesson will help you understand the basics of creating products. Feel free to experiment with adding more features, such as creating admin access to allow only admins to upload products or creating a shop profile where only users with a shop profile can upload products.
