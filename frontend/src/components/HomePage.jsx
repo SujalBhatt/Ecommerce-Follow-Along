@@ -6,7 +6,7 @@ const HomePage = () => {
 
   useEffect(() => {
     // Fetching products from the backend API
-    fetch('http://localhost:4000/api/users/products')  // Adjust the URL to your backend's URL
+    fetch('http://localhost:4000/api/products/products')  // Adjust the URL to your backend's URL
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));

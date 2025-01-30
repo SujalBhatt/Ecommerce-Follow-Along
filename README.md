@@ -246,3 +246,25 @@ Creating a form to input all the details of a product is essential for managing 
 
 ### Note
 This lesson will help you understand the basics of creating products. Feel free to experiment with adding more features, such as creating admin access to allow only admins to upload products or creating a shop profile where only users with a shop profile can upload products.
+
+
+## Milestone 10: Product Schema and Endpoint Creation
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Learn how to write a product schema.
+- Learn how to create an endpoint to validate and store product details in MongoDB.
+
+### Product Schema
+- Define the structure of product data (e.g., name, description, price, image URL) using Mongoose.
+- Ensure each field has proper validation (e.g., required fields, correct data types).
+
+### Endpoint Creation
+- Build a POST endpoint to receive product data.
+- Validate and save the product details to MongoDB.
+
+### Why Validation?
+- Ensures that only valid data is saved in the database, maintaining data integrity and preventing errors.
+
+**Note:** This lesson will help you in understanding the basics of creating products. Please feel free to experiment with adding more features like creating an admin access and allowing only admins to upload products, or creating a shop profile where only users with a shop profile can upload products.
+
