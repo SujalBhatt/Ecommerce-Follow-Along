@@ -1,21 +1,25 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
+const path = require("path");
 const app = express();
 const connectDB = require("./configurations/db");
 const userRouter = require("./routes/userRoute");
-const productRouter = require("./routes/productRoute"); // Import product router
+const productRouter = require("./routes/productRoute");
 const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
 app.use(fileUpload());
 
+// Serve static files
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 app.get("/", (req, res) => {
     res.send("API is running");
 });
 
 app.use("/api/users", userRouter);
-app.use("/api/products", productRouter); // Use product router
+app.use("/api/products", productRouter);
 
 connectDB().then(() => {
     app.listen(4000, () => {

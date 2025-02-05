@@ -1,4 +1,6 @@
 const Product = require("../models/productModel");
+const path = require("path");
+const fs = require("fs");
 
 const addProduct = async (req, res) => {
     try {
@@ -9,10 +11,23 @@ const addProduct = async (req, res) => {
         let images = [];
 
         if (req.files && req.files.images) {
+            const uploadPath = path.join(__dirname, '../uploads');
+            if (!fs.existsSync(uploadPath)) {
+                fs.mkdirSync(uploadPath);
+            }
+
             if (Array.isArray(req.files.images)) {
-                images = req.files.images.map(file => file.path);
+                images = req.files.images.map(file => {
+                    const filePath = path.join(uploadPath, file.name);
+                    file.mv(filePath);
+                    console.log("File uploaded to:", filePath); // Add this line
+                    return file.name;
+                });
             } else {
-                images = [req.files.images.path];
+                const filePath = path.join(uploadPath, req.files.images.name);
+                req.files.images.mv(filePath);
+                console.log("File uploaded to:", filePath); // Add this line
+                images = [req.files.images.name];
             }
         }
 
@@ -32,7 +47,15 @@ const addProduct = async (req, res) => {
     }
 };
 
-module.exports = { addProduct };
+const getAllProducts = async (req, res) => {
+    try {
+        const products = await Product.find();
+        res.status(200).json(products);
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        res.status(500).json({ message: "An error occurred while fetching products.", error: error.message });
+    }
+};
 
+module.exports = { addProduct, getAllProducts };
 
-// this one

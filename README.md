@@ -268,3 +268,20 @@ By the end of this milestone, you will:
 
 **Note:** This lesson will help you in understanding the basics of creating products. Please feel free to experiment with adding more features like creating an admin access and allowing only admins to upload products, or creating a shop profile where only users with a shop profile can upload products.
 
+
+## Milestone 11: Dynamic Home Page
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Learn how to write an endpoint that will extract and send data from MongoDB.
+- Learn how to receive data at the frontend.
+- Learn how to display that data dynamically using the product card created earlier.
+
+### Steps for Milestone 11 📝
+1. Write an endpoint that will send all products data to the frontend.
+2. In the frontend, write a function to get all the data.
+3. Display these data dynamically by passing them to the product card component.
+
+**Note:** This lesson will help you in understanding how to send and receive data and how to display that data dynamically using components.
+
+
