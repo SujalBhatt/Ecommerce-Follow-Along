@@ -285,3 +285,17 @@ By the end of this milestone, you will:
 **Note:** This lesson will help you in understanding how to send and receive data and how to display that data dynamically using components.
 
 
+## Milestone 12:
+
+Today, we will make our My products page that will display all the products That i was added according to my mail. We will write an endpoint that will send all the products with mail that was saved in MongoDB using add products page earlier.
+
+### Learning Goals 🎯
+
+By the end of this milestone, you will:
+
+How to write an endpoint that will send data by filtering with my mail and send data from mongodb.
+how to receive data at frontend -How to display that data dynamically using product card created earlier.
+Steps for Milestone 12📝
+Write an endpoint that will send all products with user mail to frontend In frontend write an function to get all the data Display these data dynamically passing to product card component
+
+**Note** This lesson will help you in understanding How to Filter the data with particular constrains and send it to client.
