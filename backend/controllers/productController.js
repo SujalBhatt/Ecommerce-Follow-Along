@@ -120,5 +120,16 @@ const updateProduct = async (req, res) => {
     }
 };
 
-module.exports = { addProduct, getAllProducts, getProductsByEmail, getProductById, updateProduct };
+const deleteProduct = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Product.findByIdAndDelete(id);
+        res.status(200).json({ message: "Product deleted successfully!" });
+    } catch (error) {
+        console.error("Error deleting product:", error);
+        res.status(500).json({ message: "An error occurred while deleting the product.", error: error.message });
+    }
+};
+
+module.exports = { addProduct, getAllProducts, getProductsByEmail, getProductById, updateProduct, deleteProduct };
 
