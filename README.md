@@ -299,3 +299,27 @@ Steps for Milestone 12📝
 Write an endpoint that will send all products with user mail to frontend In frontend write an function to get all the data Display these data dynamically passing to product card component
 
 **Note** This lesson will help you in understanding How to Filter the data with particular constrains and send it to client.
+
+
+## Milestone 13
+
+### Learning Goals 🎯
+- How to write an endpoint that will update the existing data in MongoDB.
+- How to auto-fill the form with previous data and give option to edit.
+
+### Steps for Milestone 13 📝
+1. Write an endpoint that will receive new data and update the existing data inside MongoDB.
+2. In frontend, add an edit button to the product card.
+3. When clicking on edit, send the data to form and make it auto-fill and have option to edit those data and save.
+
+### Progress
+- Added an endpoint to update product details in MongoDB.
+- Added an edit button to the product card.
+- Created a new component to edit product details.
+- Auto-filled the form with existing product data when editing.
+
+### Submission Guidelines 📥
+- Pushed code to GitHub repository.
+- Ensured repository is publicly accessible.
+- Updated README file to summarize progress for Milestone 13.
+- Shared repository link in the assignment submission section.

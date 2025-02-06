@@ -71,5 +71,54 @@ const getProductsByEmail = async (req, res) => {
     }
 };
 
-module.exports = { addProduct, getAllProducts, getProductsByEmail };
+const getProductById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const product = await Product.findById(id);
+        res.status(200).json(product);
+    } catch (error) {
+        console.error("Error fetching product:", error);
+        res.status(500).json({ message: "An error occurred while fetching the product.", error: error.message });
+    }
+};
+
+const updateProduct = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, description, price, email } = req.body;
+        let images = req.body.images;
+
+        if (req.files && req.files.images) {
+            const uploadPath = path.join(__dirname, '../uploads');
+            if (!fs.existsSync(uploadPath)) {
+                fs.mkdirSync(uploadPath);
+            }
+
+            if (Array.isArray(req.files.images)) {
+                images = req.files.images.map(file => {
+                    const filePath = path.join(uploadPath, file.name);
+                    file.mv(filePath);
+                    return file.name;
+                });
+            } else {
+                const filePath = path.join(uploadPath, req.files.images.name);
+                req.files.images.mv(filePath);
+                images = [req.files.images.name];
+            }
+        }
+
+        const updatedProduct = await Product.findByIdAndUpdate(
+            id,
+            { name, description, price, images, email },
+            { new: true }
+        );
+
+        res.status(200).json(updatedProduct);
+    } catch (error) {
+        console.error("Error updating product:", error);
+        res.status(500).json({ message: "An error occurred while updating the product.", error: error.message });
+    }
+};
+
+module.exports = { addProduct, getAllProducts, getProductsByEmail, getProductById, updateProduct };
 
