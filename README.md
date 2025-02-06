@@ -323,3 +323,21 @@ Write an endpoint that will send all products with user mail to frontend In fron
 - Ensured repository is publicly accessible.
 - Updated README file to summarize progress for Milestone 13.
 - Shared repository link in the assignment submission section.
+
+
+# Ecommerce Follow Along
+
+## Milestone 14
+
+### Learning Goals 🎯
+- How to write an endpoint that deletes the product with a specific ID from MongoDB.
+
+### Steps for Milestone 14 📝
+1. Write an endpoint that will delete the data from MongoDB using ID.
+2. In frontend, add a delete button to the product card.
+3. When clicking on delete button, send the product ID to server endpoint.
+
+### Progress
+- Added an endpoint to delete a product by ID in MongoDB.
+- Added a delete button to the product card.
+- Handled the delete operation in the `MyProducts` component.
