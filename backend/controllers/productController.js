@@ -7,7 +7,7 @@ const addProduct = async (req, res) => {
         console.log("Request body:", req.body);
         console.log("Request files:", req.files);
 
-        const { name, description, price } = req.body;
+        const { name, description, price, email } = req.body;
         let images = [];
 
         if (req.files && req.files.images) {
@@ -36,6 +36,7 @@ const addProduct = async (req, res) => {
             description,
             price,
             images,
+            email,
         });
 
         await newProduct.save();
@@ -57,5 +58,18 @@ const getAllProducts = async (req, res) => {
     }
 };
 
-module.exports = { addProduct, getAllProducts };
+const getProductsByEmail = async (req, res) => {
+    try {
+        const { email } = req.params;
+        console.log("Fetching products for email:", email); // Debugging line
+        const products = await Product.find({ email });
+        console.log("Fetched products:", products); // Debugging line
+        res.status(200).json(products);
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        res.status(500).json({ message: "An error occurred while fetching products.", error: error.message });
+    }
+};
+
+module.exports = { addProduct, getAllProducts, getProductsByEmail };
 

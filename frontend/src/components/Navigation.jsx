@@ -44,6 +44,14 @@ const Navigation = () => {
                             Product Form
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            to="/my-products"
+                            className="text-white text-sm font-medium hover:text-gray-200 px-4 py-2 rounded-lg transition-all duration-200"
+                        >
+                            My Products
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>

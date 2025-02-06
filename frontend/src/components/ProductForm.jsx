@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-const ProductForm = () => {
+const ProductForm = ({ email }) => {
     const [formData, setFormData] = useState({
         name: '',
         description: '',
         price: '',
-        images: []
+        images: [],
+        email: email // Initialize email from props
     });
 
     const handleChange = (e) => {
@@ -29,6 +30,7 @@ const ProductForm = () => {
         data.append('name', formData.name);
         data.append('description', formData.description);
         data.append('price', formData.price);
+        data.append('email', formData.email); // Append email to form data
         formData.images.forEach((image, index) => {
             data.append('images', image);
         });
@@ -48,7 +50,8 @@ const ProductForm = () => {
                     name: '',
                     description: '',
                     price: '',
-                    images: []
+                    images: [],
+                    email: email // Reset email field
                 });
             } else {
                 const errorData = await response.json();
@@ -111,6 +114,23 @@ const ProductForm = () => {
                             id="price"
                             name="price"
                             value={formData.price}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-gray-700 mb-1"
+                        >
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
