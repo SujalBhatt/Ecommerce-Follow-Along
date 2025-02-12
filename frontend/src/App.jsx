@@ -11,17 +11,19 @@ const App = () => {
     const userEmail = "vimlabhatt97@gmail.com"; // Replace with the actual user email
 
     return (
-        <Router>
-            <Navigation />
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/home" element={<HomePage />} />
-                <Route path="/form" element={<ProductForm email={userEmail} />} /> {/* Pass email to ProductForm */}
-                <Route path="/my-products" element={<MyProducts email={userEmail} />} /> 
-                <Route path="/edit/:id" element={<EditProductForm />} /> {/* Add route for EditProductForm */}
-            </Routes>
-        </Router>
+        <>
+            <Router>
+                <Navigation />
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/form" element={<ProductForm email={userEmail} />} /> {/* Pass email to ProductForm */}
+                    <Route path="/my-products" element={<MyProducts email={userEmail} />} /> 
+                    <Route path="/edit/:id" element={<EditProductForm />} /> {/* Add route for EditProductForm */}
+                </Routes>
+            </Router>
+        </>
     );
 };
 

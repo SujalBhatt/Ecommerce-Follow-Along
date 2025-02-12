@@ -74,7 +74,7 @@ const EditProductForm = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
             <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Edit Product</h2>
                 <form onSubmit={handleSubmit} encType="multipart/form-data">

@@ -65,14 +65,14 @@ const ProductForm = ({ email }) => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Add Product</h2>
+        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
+            <div className="w-full max-w-lg p-10 bg-white rounded-lg shadow-2xl">
+                <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8">Add New Product</h2>
                 <form onSubmit={handleSubmit} encType="multipart/form-data">
-                    <div className="mb-4">
+                    <div className="mb-6">
                         <label
                             htmlFor="name"
-                            className="block text-sm font-medium text-gray-700 mb-1"
+                            className="block text-lg font-medium text-gray-700 mb-2"
                         >
                             Product Name
                         </label>
@@ -83,13 +83,13 @@ const ProductForm = ({ email }) => {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
                         />
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-6">
                         <label
                             htmlFor="description"
-                            className="block text-sm font-medium text-gray-700 mb-1"
+                            className="block text-lg font-medium text-gray-700 mb-2"
                         >
                             Description
                         </label>
@@ -99,13 +99,13 @@ const ProductForm = ({ email }) => {
                             value={formData.description}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
                         />
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-6">
                         <label
                             htmlFor="price"
-                            className="block text-sm font-medium text-gray-700 mb-1"
+                            className="block text-lg font-medium text-gray-700 mb-2"
                         >
                             Price
                         </label>
@@ -116,13 +116,13 @@ const ProductForm = ({ email }) => {
                             value={formData.price}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
                         />
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-6">
                         <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-gray-700 mb-1"
+                            className="block text-lg font-medium text-gray-700 mb-2"
                         >
                             Email
                         </label>
@@ -133,13 +133,13 @@ const ProductForm = ({ email }) => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
                         />
                     </div>
-                    <div className="mb-6">
+                    <div className="mb-8">
                         <label
                             htmlFor="images"
-                            className="block text-sm font-medium text-gray-700 mb-1"
+                            className="block text-lg font-medium text-gray-700 mb-2"
                         >
                             Product Images
                         </label>
@@ -150,12 +150,12 @@ const ProductForm = ({ email }) => {
                             multiple
                             onChange={handleImageChange}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        className="w-full py-3 text-lg text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                     >
                         Add Product
                     </button>

@@ -341,3 +341,25 @@ Write an endpoint that will send all products with user mail to frontend In fron
 - Added an endpoint to delete a product by ID in MongoDB.
 - Added a delete button to the product card.
 - Handled the delete operation in the `MyProducts` component.
+
+
+## Milestone 15: Navbar Component and Navigation
+
+### Learning Goals 🎯
+- How to create a Nav component.
+- How to reuse the same component in multiple pages.
+
+### Steps Completed
+1. Created a new Nav component with links to all pages:
+   - Home
+   - My-products
+   - Add product
+   - Cart
+2. Made the Navbar responsive to all screen sizes.
+3. Added the Nav component to all the pages and ensured smooth navigation.
+
+### Progress
+- Created a reusable Nav component with links to Home, My-products, Add product, and Cart pages.
+- Ensured the Navbar is responsive and visually appealing using Tailwind CSS.
+- Integrated the Nav component into all pages for consistent navigation.
+- Updated the App component to include the Nav component and added routes for all pages.
