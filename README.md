@@ -387,3 +387,20 @@ Write an endpoint that will send all products with user mail to frontend In fron
 - Ensured the repository is publicly accessible.
 - Updated the README file to summarize the progress for Milestone 16.
 - Shared the repository link in the assignment submission section.
+
+
+## Milestone 17: Cart Functionality
+
+### Learning Goals 🎯
+- Edit the user schema to store cart products.
+- Write an endpoint to receive the product details and store them in the database.
+
+### Steps Completed
+1. Edited the user schema to include a cart field for storing products.
+2. Created a new Cart schema to structure cart data.
+3. Wrote an endpoint to receive product details and store them in the cart.
+
+### Progress
+- Updated the user schema to include a cart field.
+- Created a new Cart schema to manage cart data.
+- Implemented an endpoint to handle adding products to the cart and storing them in the database.
