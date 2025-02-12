@@ -363,3 +363,27 @@ Write an endpoint that will send all products with user mail to frontend In fron
 - Ensured the Navbar is responsive and visually appealing using Tailwind CSS.
 - Integrated the Nav component into all pages for consistent navigation.
 - Updated the App component to include the Nav component and added routes for all pages.
+
+## Milestone 16: Product Info Page
+
+### Learning Goals 🎯
+- How to create a new page to display each product.
+- How to add quantity selection and an "Add to Cart" button.
+
+### Steps Completed
+1. Created a new ProductInfo component to display product details.
+2. Added quantity selection and an "Add to Cart" button.
+3. Updated the App component to include a route for the ProductInfo page.
+4. Updated the Card component to link to the ProductInfo page.
+
+### Progress
+- Created a reusable ProductInfo component to display detailed product information.
+- Implemented quantity selection and an "Add to Cart" button.
+- Integrated the ProductInfo component into the App component and added a route for it.
+- Updated the Card component to navigate to the ProductInfo page when a product is clicked.
+
+### Submission Guidelines 📥
+- Pushed the code to the GitHub repository.
+- Ensured the repository is publicly accessible.
+- Updated the README file to summarize the progress for Milestone 16.
+- Shared the repository link in the assignment submission section.
