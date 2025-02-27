@@ -13,6 +13,20 @@ const HomePage = () => {
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
 
+  const handleDelete = (productId) => {
+    fetch(`http://localhost:4000/api/products/${productId}`, {
+      method: 'DELETE',
+    })
+      .then((response) => {
+        if (response.ok) {
+          setProducts(products.filter((product) => product._id !== productId));
+        } else {
+          console.error('Failed to delete product');
+        }
+      })
+      .catch((error) => console.error('Error deleting product:', error));
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
       <div className="container mx-auto p-8">
@@ -27,7 +41,7 @@ const HomePage = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
-            <Card key={product._id} product={product} />
+            <Card key={product._id} product={product} onDelete={handleDelete} />
           ))}
         </div>
       </div>

@@ -7,6 +7,7 @@ import ProductForm from "./components/ProductForm";
 import MyProducts from "./components/MyProducts"; 
 import EditProductForm from "./components/EditProductForm"; // Import EditProductForm
 import ProductInfo from "./components/ProductInfo"; // Import ProductInfo
+import Cart from "./components/Cart"; // Import Cart
 
 const App = () => {
     const userEmail = "vimlabhatt97@gmail.com"; // Replace with the actual user email
@@ -23,6 +24,7 @@ const App = () => {
                 <Route path="/my-products" element={<MyProducts email={userEmail} />} /> 
                 <Route path="/edit/:id" element={<EditProductForm />} /> {/* Add route for EditProductForm */}
                 <Route path="/product/:id" element={<ProductInfo />} /> {/* Add route for ProductInfo */}
+                <Route path="/cart" element={<Cart />} /> {/* Add route for Cart */}
             </Routes>
         </Router>
     );

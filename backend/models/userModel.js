@@ -13,9 +13,14 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    cart: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Cart"
     }
-    
 })
 
-module.exports = mongoose.model("user", userSchema)
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
 

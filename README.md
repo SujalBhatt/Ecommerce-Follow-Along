@@ -404,3 +404,23 @@ Write an endpoint that will send all products with user mail to frontend In fron
 - Updated the user schema to include a cart field.
 - Created a new Cart schema to manage cart data.
 - Implemented an endpoint to handle adding products to the cart and storing them in the database.
+
+
+## Milestone 18: Cart Functionality
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create an endpoint to receive requests from the cart page.
+- Create a backend endpoint to fetch all the products inside the cart with the user's email.
+
+### Steps for Milestone 18 📝
+1. Create a backend endpoint for the cart page.
+2. Write an endpoint to get products inside the cart for the user.
+
+### Outcome
+This lesson will help you understand how to create cart functionality, allowing users to view and manage the products in their cart.
+
+### Progress
+- Added an endpoint to receive requests from the cart page.
+- Implemented a backend endpoint to fetch all products inside the cart using the user's email.
+

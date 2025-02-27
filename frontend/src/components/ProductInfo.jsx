@@ -14,8 +14,22 @@ const ProductInfo = () => {
     }, [id]);
 
     const handleAddToCart = () => {
-        // Implement add to cart functionality here
-        alert(`Added ${quantity} of ${product.name} to cart`);
+        fetch("http://localhost:4000/api/cart/add", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userId: "67b5689b220a98f43212a3be", // Replace with actual user ID
+                productId: product._id,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(`Added ${quantity} of ${product.name} to cart`);
+        })
+        .catch(error => console.error("Error adding to cart:", error));
     };
 
     if (!product) {

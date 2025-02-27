@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Card = ({ product, onDelete }) => {
@@ -12,7 +13,12 @@ const Card = ({ product, onDelete }) => {
           <p className="text-lg font-bold text-gray-700">${product.price}</p>
         </Link>
         <Link to={`/edit/${product._id}`} className="text-blue-500 hover:underline">Edit</Link> {/* Add edit button */}
-        <button onClick={() => onDelete(product._id)} className="text-red-500 hover:underline ml-4">Delete</button> {/* Add delete button */}
+        <button
+          onClick={() => onDelete(product._id)}
+          className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-all duration-200"
+        >
+          Delete
+        </button>
       </div>
     );
 };

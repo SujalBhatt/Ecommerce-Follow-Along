@@ -5,6 +5,7 @@ const app = express();
 const connectDB = require("./configurations/db");
 const userRouter = require("./routes/userRoute");
 const productRouter = require("./routes/productRoute");
+const cartRouter = require("./routes/cartRoute");
 const cors = require("cors");
 
 app.use(express.json());
@@ -20,11 +21,12 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/cart", cartRouter);
 
 connectDB().then(() => {
     app.listen(4000, () => {
         console.log("Server is listening on port 4000" );
     });
 }).catch((error) => {
-    console.error("Failed to connect to the database:", error);
+    console.error("Failed to connect to the database:", error );
 });

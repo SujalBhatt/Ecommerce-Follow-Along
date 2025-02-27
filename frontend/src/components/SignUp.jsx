@@ -79,7 +79,7 @@ const SignUp = () => {
                         <input
                             type="text"
                             id="name"
-                            name="name"
+                            name="name" 
                             value={formData.name}
                             onChange={handleChange}
                             required
