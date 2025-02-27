@@ -53,4 +53,30 @@ const getCartProducts = async (req, res) => {
     }
 };
 
-module.exports = { addToCart, getCartProducts };
+const updateQuantity = async (req, res) => {
+    try {
+        const { userId, productId, quantity } = req.body;
+
+        let cart = await Cart.findOne({ user: userId });
+
+        if (!cart) {
+            return res.status(404).json({ message: "Cart not found" });
+        }
+
+        const productIndex = cart.products.findIndex(p => p.product.toString() === productId);
+
+        if (productIndex > -1) {
+            cart.products[productIndex].quantity = quantity;
+            await cart.save();
+            const updatedCart = await Cart.findOne({ user: userId }).populate("products.product");
+            res.status(200).json(updatedCart.products);
+        } else {
+            res.status(404).json({ message: "Product not found in cart" });
+        }
+    } catch (error) {
+        console.error("Error updating quantity:", error);
+        res.status(500).json({ message: "An error occurred while updating the quantity.", error: error.message });
+    }
+};
+
+module.exports = { addToCart, getCartProducts, updateQuantity };

@@ -424,3 +424,25 @@ This lesson will help you understand how to create cart functionality, allowing 
 - Added an endpoint to receive requests from the cart page.
 - Implemented a backend endpoint to fetch all products inside the cart using the user's email.
 
+
+## Milestone 19: Cart Quantity Management
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a cart page that displays the products inside the cart using the endpoint built in Milestone 18.
+- For each product, add an option to increase and decrease quantity using + and - buttons.
+- Write an endpoint to increase and decrease the quantity.
+
+### Steps for Milestone 19 📝
+1. Create a cart frontend page and display the products.
+2. For each product, add an option to increase and decrease quantity using + and - buttons.
+3. Create a backend endpoint to increase and decrease quantity.
+
+### Outcome
+This lesson will help you understand how to create cart functionality, allowing users to manage the quantity of products in their cart.
+
+### Progress
+- Created a cart page to display products inside the cart.
+- Added + and - buttons for each product to manage quantity.
+- Implemented backend endpoints to handle quantity updates.
+

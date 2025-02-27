@@ -2,23 +2,29 @@ import React, { useEffect, useState } from "react";
 
 const Cart = () => {
     const [cartProducts, setCartProducts] = useState([]);
+    const userId = "67b5689b220a98f43212a3be"; // Replace with actual user ID
 
     useEffect(() => {
-        console.log("Fetching cart products..."); // Debugging line
-        fetch("http://localhost:4000/api/cart/67b5689b220a98f43212a3be") // Replace USER_ID with actual user ID
-            .then(response => {
-                console.log("Response received:", response); // Debugging line
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("Fetched cart products:", data); // Debugging line
-                setCartProducts(data);
-            })
+        fetch(`http://localhost:4000/api/cart/${userId}`)
+            .then(response => response.json())
+            .then(data => setCartProducts(data))
             .catch(error => console.error("Error fetching cart products:", error));
-    }, []);
+    }, [userId]);
+
+    const updateQuantity = (productId, quantity) => {
+        fetch(`http://localhost:4000/api/cart/update-quantity`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userId, productId, quantity })
+        })
+        .then(response => response.json())
+        .then(data => {
+            setCartProducts(data);
+        })
+        .catch(error => console.error("Error updating quantity:", error));
+    };
 
     const validCartProducts = cartProducts.filter(product => product.product && product.product.images);
 
@@ -34,7 +40,11 @@ const Cart = () => {
                             <img src={`http://localhost:4000/uploads/${product.product.images[0]}`} alt={product.product.name} className="w-full h-40 object-cover rounded-md mb-4" />
                             <h2 className="text-xl font-semibold">{product.product.name}</h2>
                             <p className="text-lg font-bold text-gray-700">${product.product.price}</p>
-                            <p className="text-gray-600">Quantity: {product.quantity}</p>
+                            <div className="flex items-center mt-4">
+                                <button onClick={() => updateQuantity(product.product._id, product.quantity - 1)} className="bg-gray-300 text-gray-700 px-2 py-1 rounded-l">-</button>
+                                <span className="px-4">{product.quantity}</span>
+                                <button onClick={() => updateQuantity(product.product._id, product.quantity + 1)} className="bg-gray-300 text-gray-700 px-2 py-1 rounded-r">+</button>
+                            </div>
                         </div>
                     ))}
                 </div>

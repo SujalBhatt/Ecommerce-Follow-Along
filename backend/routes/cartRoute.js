@@ -1,8 +1,9 @@
 const express = require("express");
+const { addToCart, getCartProducts, updateQuantity } = require("../controllers/cartController");
 const router = express.Router();
-const { addToCart, getCartProducts } = require("../controllers/cartController");
 
 router.post("/add", addToCart);
-router.get("/:userId", getCartProducts); // Add route to fetch cart products
+router.get("/:userId", getCartProducts);
+router.post("/update-quantity", updateQuantity);
 
 module.exports = router;
