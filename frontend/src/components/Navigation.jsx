@@ -60,6 +60,14 @@ const Navigation = () => {
                             Cart
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            to="/profile"
+                            className="text-white text-lg font-medium hover:text-gray-200 px-5 py-3 rounded-lg transition-all duration-200"
+                        >
+                            Profile
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>

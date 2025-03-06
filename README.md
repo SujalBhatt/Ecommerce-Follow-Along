@@ -446,3 +446,31 @@ This lesson will help you understand how to create cart functionality, allowing 
 - Added + and - buttons for each product to manage quantity.
 - Implemented backend endpoints to handle quantity updates.
 
+
+## Milestone 20: User Profile Page
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a backend endpoint that will send user data using email.
+- Create a frontend profile page that will display all the user data.
+- Display profile photo, name, and email in one section.
+- Display addresses in another section with an "Add address" button.
+- If there are no addresses, display "No address found".
+
+### Steps for Milestone 20 📝
+1. Create a backend endpoint that will send user data.
+2. Create a frontend profile page.
+3. Display profile photo, name, and email in one section.
+4. Display addresses in another section with an "Add address" button.
+5. If there are no addresses, display "No address found".
+
+### Outcome
+This lesson will help you understand how to display a profile page with user data and addresses.
+
+### Progress
+- Added a backend endpoint to send user data using email.
+- Created a frontend profile page to display user data.
+- Displayed profile photo, name, and email in one section.
+- Displayed addresses in another section with an "Add address" button.
+- Displayed "No address found" if there are no addresses.
+
