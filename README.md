@@ -474,3 +474,18 @@ This lesson will help you understand how to display a profile page with user dat
 - Displayed addresses in another section with an "Add address" button.
 - Displayed "No address found" if there are no addresses.
 
+## Milestone 21: Address Form
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a frontend form that will take address details.
+- Take inputs for country, city, address1, address2, zip code, and address type.
+
+### Steps for Milestone 21 📝
+1. Create an address form frontend page.
+2. Create a state that will store input address.
+3. When clicking on "Add address" in the profile, it should navigate to this form page.
+
+### Outcome
+This lesson will help you understand how to create an address form and manage address data in the frontend.
+
