@@ -544,6 +544,41 @@ By the end of this milestone, you will:
 6. **App Component:**
    - Add a route for the `SelectAddress` component.
 
+## Milestone 24: Order Confirmation Page
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create an order confirmation page.
+- Display the products being ordered, the selected delivery address, and the total price.
+- Add a "Place Order" button at the bottom.
+
+### Steps for Milestone 24 📝
+1. **Create the Order Confirmation Page:**
+   - Create a new component `OrderConfirmation`.
+   - Fetch and display the products being ordered.
+   - Display the selected delivery address.
+   - Display the total price of the cart.
+   - Add a "Place Order" button at the bottom.
+
+### Outcome
+This lesson will help you understand how to implement an order confirmation page that displays the products being ordered, the selected delivery address, and the total price. The user can then place the order by clicking the "Place Order" button.
+
+### Code Changes
+
+1. **Order Confirmation Component:**
+   - Create a new component to display the order confirmation details.
+   - Ensure the component correctly handles the state passed from the `SelectAddress` component.
+
+2. **Select Address Component:**
+   - Update the component to navigate to the `OrderConfirmation` page with the selected address and cart details.
+
+3. **App Component:**
+   - Add a route for the `OrderConfirmation` component.
+
+### Progress
+- Created an order confirmation page to display the products being ordered, the selected delivery address, and the total price.
+- Added a "Place Order" button at the bottom of the order confirmation page.
+- Ensured the `OrderConfirmation` component correctly handles the state passed from the `SelectAddress` component.
 
 
 

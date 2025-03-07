@@ -7,15 +7,32 @@ const SelectAddress = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [email, setEmail] = useState("");
+    const [cartProducts, setCartProducts] = useState([]);
+    const [totalAmount, setTotalAmount] = useState(0);
 
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         setEmail(params.get("email"));
+        const userId = params.get("userId");
 
         fetch(`http://localhost:4000/api/users/${params.get("email")}/addresses`)
             .then((response) => response.json())
             .then((data) => setAddresses(data))
             .catch((error) => console.error("Error fetching addresses:", error));
+
+        fetch(`http://localhost:4000/api/cart/${userId}`)
+            .then((response) => response.json())
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    const validData = data.filter(product => product && product.product);
+                    setCartProducts(validData);
+                    const total = validData.reduce((sum, product) => sum + product.product.price * product.quantity, 0);
+                    setTotalAmount(total);
+                } else {
+                    console.error("Error fetching cart products:", data);
+                }
+            })
+            .catch((error) => console.error("Error fetching cart products:", error));
     }, [location]);
 
     const handleSelectAddress = (address) => {
@@ -24,9 +41,9 @@ const SelectAddress = () => {
 
     const handleConfirmOrder = () => {
         if (selectedAddress) {
-            // Implement order placement logic here
-            console.log("Order placed with address:", selectedAddress);
-            navigate("/order-confirmation");
+            navigate("/order-confirmation", {
+                state: { cartProducts, selectedAddress, totalAmount }
+            });
         } else {
             alert("Please select an address.");
         }

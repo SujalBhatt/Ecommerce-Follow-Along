@@ -11,6 +11,7 @@ import Cart from "./components/Cart"; // Import Cart
 import Profile from "./components/Profile"; // Import Profile
 import AddressForm from "./components/AddressForm"; // Import AddressForm
 import SelectAddress from "./components/SelectAddress"; // Import SelectAddress
+import OrderConfirmation from "./components/OrderConfirmation"; // Import OrderConfirmation
 
 const App = () => {
     const userEmail = "vimlabhatt97@gmail.com"; // Replace with the actual user email
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path="/profile/:email" element={<Profile />} /> {/* Update route for Profile */}
                 <Route path="/add-address" element={<AddressForm email={userEmail} />} /> {/* Add route for AddressForm */}
                 <Route path="/select-address" element={<SelectAddress />} /> {/* Add route for SelectAddress */}
+                <Route path="/order-confirmation" element={<OrderConfirmation />} /> {/* Add route for OrderConfirmation */}
             </Routes>
         </Router>
     );

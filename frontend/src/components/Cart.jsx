@@ -30,7 +30,7 @@ const Cart = () => {
     };
 
     const handlePlaceOrder = () => {
-        navigate(`/select-address?email=${userEmail}`);
+        navigate(`/select-address?email=${userEmail}&userId=${userId}`);
     };
 
     const validCartProducts = cartProducts.filter(product => product.product && product.product.images);
