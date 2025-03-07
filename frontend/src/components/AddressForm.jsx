@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const AddressForm = ({ email }) => {
+const AddressForm = () => {
     const [address, setAddress] = useState({
         country: "",
         city: "",
@@ -11,6 +11,13 @@ const AddressForm = ({ email }) => {
         addressType: ""
     });
     const navigate = useNavigate();
+    const location = useLocation();
+    const [email, setEmail] = useState("");
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        setEmail(params.get("email"));
+    }, [location]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -31,7 +38,7 @@ const AddressForm = ({ email }) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                navigate("/profile");
+                navigate(`/profile/${email}`);
             })
             .catch((error) => console.error("Error adding address:", error));
     };

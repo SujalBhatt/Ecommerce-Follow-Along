@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+    const userEmail = "vimlabhatt97@gmail.com"; // Replace with the actual user email
+
     return (
         <nav className="bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg">
             <div className="container mx-auto flex items-center justify-between px-8 py-5">
@@ -62,7 +64,7 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link
-                            to="/profile"
+                            to={`/profile/${userEmail}`}
                             className="text-white text-lg font-medium hover:text-gray-200 px-5 py-3 rounded-lg transition-all duration-200"
                         >
                             Profile

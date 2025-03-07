@@ -489,3 +489,62 @@ By the end of this milestone, you will:
 ### Outcome
 This lesson will help you understand how to create an address form and manage address data in the frontend.
 
+## Milestone 22: Save Address in User Profile
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a backend endpoint that will store the address inside the user profile in the database.
+
+### Steps for Milestone 22 📝
+1. Create an endpoint that will receive the address from the address form in the frontend.
+2. Add the address to the address array inside the user collection.
+
+### Outcome
+This lesson will help you understand how to create an endpoint that will store the address in the user profile.
+
+## Milestone 23
+
+By the end of this milestone, you will:
+
+- Add a "Place Order" button inside the cart page.
+- Create a select address page where all the addresses are displayed, and the user can select a delivery address.
+- Write a Mongoose schema for storing order details.
+
+#### Steps for Milestone 23
+
+1. **Add a "Place Order" button inside the cart page:**
+   - Navigate to the `Cart` component.
+   - Add a button that navigates to the select address page when clicked.
+
+2. **Create a select address page:**
+   - Create a new component `SelectAddress`.
+   - Fetch and display all the available addresses for the user.
+   - Allow the user to select one address.
+
+3. **Write a Mongoose schema for storing order details:**
+   - Create a new Mongoose schema `orderModel.js` to store order details.
+
+#### Code Changes
+
+1. **Cart Component:**
+   - Add a "Place Order" button that navigates to the select address page.
+
+2. **Select Address Component:**
+   - Create a new component to display all available addresses and allow the user to select one.
+
+3. **Order Model:**
+   - Create a new Mongoose schema for storing order details.
+
+4. **User Route:**
+   - Add a new endpoint to get all addresses of a user.
+
+5. **User Controller:**
+   - Ensure the `addAddress` function is implemented correctly.
+
+6. **App Component:**
+   - Add a route for the `SelectAddress` component.
+
+
+
+
+
