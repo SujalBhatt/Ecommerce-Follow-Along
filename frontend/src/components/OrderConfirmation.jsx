@@ -4,14 +4,24 @@ import { useLocation, useNavigate } from "react-router-dom";
 const OrderConfirmation = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { cartProducts, selectedAddress, totalAmount } = location.state || {};
+    const { cartProducts, selectedAddress, totalAmount, email } = location.state || {};
 
     console.log("OrderConfirmation state:", location.state); // Debugging information
 
     const handlePlaceOrder = () => {
-        // Implement order placement logic here
-        console.log("Order placed with address:", selectedAddress);
-        navigate("/order-success");
+        fetch("http://localhost:4000/api/orders/place-order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, cartProducts, selectedAddress, totalAmount })
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Order placed successfully:", data);
+                navigate("/order-success");
+            })
+            .catch((error) => console.error("Error placing order:", error));
     };
 
     if (!Array.isArray(cartProducts) || !selectedAddress) {

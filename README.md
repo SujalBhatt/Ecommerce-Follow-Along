@@ -580,6 +580,47 @@ This lesson will help you understand how to implement an order confirmation page
 - Added a "Place Order" button at the bottom of the order confirmation page.
 - Ensured the `OrderConfirmation` component correctly handles the state passed from the `SelectAddress` component.
 
+## Milestone 25: Place Order Backend Endpoint
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a backend endpoint that will help in placing the order.
+- Retrieve the user ID using the email.
+- Store order details in the MongoDB order collection using the order schema.
+
+### Steps for Milestone 25 📝
+1. **Create the Backend Endpoint:**
+   - Create a new route file for handling order-related endpoints.
+   - Create a new controller file for handling order-related logic.
+   - Implement the logic to retrieve the user by email and store the order details.
+
+2. **Update the Order Confirmation Component:**
+   - Update the `OrderConfirmation` component to call the new backend endpoint for placing the order.
+
+### Outcome
+This lesson will help you understand how to create a backend endpoint for placing orders, retrieve the user ID using the email, and store the order details in the MongoDB order collection using the order schema.
+
+### Code Changes
+
+1. **Order Route:**
+   - Create a new route file for handling order-related endpoints.
+
+2. **Order Controller:**
+   - Create a new controller file for handling order-related logic.
+   - Implement the logic to retrieve the user by email and store the order details.
+
+3. **Server Setup:**
+   - Ensure the server is set up to handle the new order routes.
+
+4. **Order Confirmation Component:**
+   - Update the `OrderConfirmation` component to call the new backend endpoint for placing the order.
+
+### Progress
+- Created a backend endpoint for placing orders.
+- Retrieved the user ID using the email.
+- Stored the order details in the MongoDB order collection using the order schema.
+- Updated the `OrderConfirmation` component to call the new backend endpoint for placing the order.
+
 
 
 
