@@ -659,6 +659,45 @@ This lesson will help you understand how to create a backend endpoint for gettin
 - Sent all the user's orders in the response.
 - Updated the `Profile` component to fetch and display user orders.
 
+## Milestone 27: My Orders Page
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a frontend page that will display all the user orders.
+- Send a GET request to the `my-orders` endpoint created in the previous milestone.
+- Display all the user orders.
+
+### Steps for Milestone 27 📝
+1. **Create the My Orders Page:**
+   - Create a new component `MyOrders`.
+   - Send a GET request to the `my-orders` endpoint with the user email.
+   - Display all the user orders.
+
+2. **Add My Orders Page to Navigation:**
+   - Add a link to the `MyOrders` page in the navigation bar for better navigation.
+
+### Outcome
+This lesson will help you understand how to create a frontend page to display all the user orders and navigate to it from the navigation bar.
+
+### Code Changes
+
+1. **My Orders Component:**
+   - Create a new component to display all user orders.
+   - Send a GET request to the `my-orders` endpoint with the user email.
+   - Display all the user orders.
+
+2. **App Component:**
+   - Add a route for the `MyOrders` component.
+
+3. **Navigation Component:**
+   - Add a link to the `MyOrders` page in the navigation bar.
+
+### Progress
+- Created a frontend page to display all the user orders.
+- Sent a GET request to the `my-orders` endpoint with the user email.
+- Displayed all the user orders.
+- Added a link to the `MyOrders` page in the navigation bar for better navigation.
+
 
 
 

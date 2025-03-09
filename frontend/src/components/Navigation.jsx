@@ -70,6 +70,14 @@ const Navigation = () => {
                             Profile
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            to={`/my-orders/${userEmail}`}
+                            className="text-white text-lg font-medium hover:text-gray-200 px-5 py-3 rounded-lg transition-all duration-200"
+                        >
+                            My Orders
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>
