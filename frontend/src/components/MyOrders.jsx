@@ -18,6 +18,29 @@ const MyOrders = () => {
             .catch((error) => console.error("Error fetching user orders:", error));
     }, [email]);
 
+    const handleCancelOrder = (orderId) => {
+        fetch("http://localhost:4000/api/orders/cancel-order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ orderId })
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.message === "Order canceled successfully") {
+                    setOrders((prevOrders) =>
+                        prevOrders.map((order) =>
+                            order._id === orderId ? { ...order, status: "Canceled" } : order
+                        )
+                    );
+                } else {
+                    console.error("Error canceling order:", data.message);
+                }
+            })
+            .catch((error) => console.error("Error canceling order:", error));
+    };
+
     return (
         <div className="container mx-auto p-8">
             <h1 className="text-3xl font-bold mb-6">My Orders</h1>
@@ -37,6 +60,14 @@ const MyOrders = () => {
                                     </li>
                                 ))}
                             </ul>
+                            {order.status !== "Canceled" && (
+                                <button
+                                    onClick={() => handleCancelOrder(order._id)}
+                                    className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-all duration-200 mt-4"
+                                >
+                                    Cancel Order
+                                </button>
+                            )}
                         </li>
                     ))}
                 </ul>

@@ -698,6 +698,45 @@ This lesson will help you understand how to create a frontend page to display al
 - Displayed all the user orders.
 - Added a link to the `MyOrders` page in the navigation bar for better navigation.
 
+## Milestone 28: Cancel Order Functionality
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Allow users to cancel their placed orders.
+- Create a backend endpoint to handle order cancellation.
+- Update the order status to "Canceled" when an order is canceled.
+
+### Steps for Milestone 28 📝
+1. **Add Cancel Button in My Orders Page:**
+   - Add a cancel order button for each order in the `MyOrders` page.
+   - Ensure the cancel button is not displayed for orders that are already canceled.
+
+2. **Create Cancel Order Endpoint:**
+   - Create a new endpoint that will receive the order ID.
+   - Retrieve the order using the order ID and update the status to "Canceled".
+   - Save the updated order.
+
+### Outcome
+This lesson will help you understand how to allow users to cancel their placed orders and handle order cancellation in the backend.
+
+### Code Changes
+
+1. **Order Route:**
+   - Add a new endpoint to cancel an order.
+
+2. **Order Controller:**
+   - Add a new function to handle canceling an order.
+
+3. **My Orders Component:**
+   - Add a cancel button for each order.
+   - Handle the cancel order functionality.
+
+### Progress
+- Added a cancel order button for each order in the `MyOrders` page.
+- Created a new endpoint to handle order cancellation.
+- Updated the order status to "Canceled" when an order is canceled.
+- Ensured the cancel button is not displayed for orders that are already canceled.
+
 
 
 
