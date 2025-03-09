@@ -621,6 +621,44 @@ This lesson will help you understand how to create a backend endpoint for placin
 - Stored the order details in the MongoDB order collection using the order schema.
 - Updated the `OrderConfirmation` component to call the new backend endpoint for placing the order.
 
+## Milestone 26: Get User Orders Backend Endpoint
+
+### Learning Goals 🎯
+By the end of this milestone, you will:
+- Create a backend endpoint that will help in getting all the orders of the user.
+- Retrieve the user ID using the email.
+- Get all orders of the user using the user ID.
+- Send all the user's orders in the response.
+
+### Steps for Milestone 26 📝
+1. **Create the Backend Endpoint:**
+   - Create a new function in the order controller to handle retrieving all orders of a user.
+   - Add a new endpoint in the order route to get all orders of a user.
+
+2. **Update the Profile Component:**
+   - Update the `Profile` component to fetch and display user orders.
+
+### Outcome
+This lesson will help you understand how to create a backend endpoint for getting all the orders of a user, retrieve the user ID using the email, and get all orders of the user using the user ID.
+
+### Code Changes
+
+1. **Order Route:**
+   - Add a new endpoint to get all orders of a user.
+
+2. **Order Controller:**
+   - Add a new function to handle retrieving all orders of a user.
+
+3. **Profile Component:**
+   - Update the `Profile` component to fetch and display user orders.
+
+### Progress
+- Created a backend endpoint for getting all orders of a user.
+- Retrieved the user ID using the email.
+- Got all orders of the user using the user ID.
+- Sent all the user's orders in the response.
+- Updated the `Profile` component to fetch and display user orders.
+
 
 
 

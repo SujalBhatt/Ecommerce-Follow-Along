@@ -19,7 +19,11 @@ const OrderConfirmation = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log("Order placed successfully:", data);
-                navigate("/order-success");
+                if (data.message === "Order placed successfully") {
+                    navigate("/order-success");
+                } else {
+                    console.error("Error placing order:", data.message);
+                }
             })
             .catch((error) => console.error("Error placing order:", error));
     };

@@ -42,7 +42,7 @@ const SelectAddress = () => {
     const handleConfirmOrder = () => {
         if (selectedAddress) {
             navigate("/order-confirmation", {
-                state: { cartProducts, selectedAddress, totalAmount }
+                state: { cartProducts, selectedAddress, totalAmount, email } // Pass email to OrderConfirmation
             });
         } else {
             alert("Please select an address.");
