@@ -6,7 +6,7 @@ const Card = ({ product, onDelete }) => {
     console.log("Image URL:", imageUrl); // Debugging line
 
     return (
-      <div className="bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-shadow">
+      <div className="bg-white shadow-[0_8px_30px_rgba(0,0,0,0.3)] rounded-lg p-4 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)] transition-shadow">
         <Link to={`/product/${product._id}`}>
           <img src={imageUrl} alt={product.name} className="w-full h-40 object-cover rounded-md" />
           <h3 className="text-xl font-semibold mt-2">{product.name}</h3>

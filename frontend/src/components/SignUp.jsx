@@ -65,8 +65,13 @@ const SignUp = () => {
 };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="w-full max-w-lg p-10 bg-white rounded-lg shadow-2xl">
+        <div
+            className="flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat w-full"
+            style={{
+                backgroundImage: "url('https://img.freepik.com/premium-photo/online-store-concept-with-smartphone-copy-space-3d-illustration-online-shopping_522591-16.jpg?semt=ais_hybrid')",
+            }}
+        >
+            <div className="w-full max-w-lg p-10 bg-white rounded-3xl shadow-2xl">
                 <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8">Create Account</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-6">
@@ -128,14 +133,14 @@ const SignUp = () => {
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-3 text-lg text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        className="w-full py-3 text-lg text-white bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                         disabled={passwordErrors.length > 0}
                     >
                         Sign Up
                     </button>
                 </form>
                 <div className="text-center mt-4">
-                    <Link to="/login" className="text-blue-500 hover:underline">
+                    <Link to="/login" className="text-purple-600 hover:underline">
                         Already have an account? Login here
                     </Link>
                 </div>

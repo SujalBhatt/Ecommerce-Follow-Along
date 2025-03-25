@@ -27,11 +27,11 @@ const ProductForm = ({ email }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = new FormData();
-        data.append('name', formData.name);
-        data.append('description', formData.description);
-        data.append('price', formData.price);
-        data.append('email', formData.email); // Append email to form data
-        formData.images.forEach((image, index) => {
+        data.append('name', formData?.name || ""); // Ensure name is not null
+        data.append('description', formData?.description || "");
+        data.append('price', formData?.price || "");
+        data.append('email', formData?.email || ""); // Ensure email is not null
+        formData?.images?.forEach((image, index) => {
             data.append('images', image);
         });
 
@@ -65,10 +65,15 @@ const ProductForm = ({ email }) => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
-            <div className="w-full max-w-lg p-10 bg-white rounded-lg shadow-2xl">
-                <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8">Add New Product</h2>
-                <form onSubmit={handleSubmit} encType="multipart/form-data">
+        <div
+            className="w-screen min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center"
+            style={{
+                backgroundImage: "url('https://img.freepik.com/premium-photo/bill-shopping-cart-floating-purple-background-with-smartphone-shop-store-online-concept-cartoon-minimal-discount-promotion-sale-banner-website-3d-render-illustration_598821-1257.jpg?semt=ais_hybrid')",
+            }}
+        >
+            <div className="bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] w-full max-w-3xl mt-10">
+                <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-8">Add Product</h1>
+                <form onSubmit={handleSubmit}>
                     <div className="mb-6">
                         <label
                             htmlFor="name"
@@ -83,7 +88,7 @@ const ProductForm = ({ email }) => {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 claymorphism-input"
                         />
                     </div>
                     <div className="mb-6">
@@ -99,7 +104,7 @@ const ProductForm = ({ email }) => {
                             value={formData.description}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 claymorphism-input"
                         />
                     </div>
                     <div className="mb-6">
@@ -116,7 +121,7 @@ const ProductForm = ({ email }) => {
                             value={formData.price}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 claymorphism-input"
                         />
                     </div>
                     <div className="mb-6">
@@ -133,7 +138,7 @@ const ProductForm = ({ email }) => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 claymorphism-input"
                         />
                     </div>
                     <div className="mb-8">
@@ -150,14 +155,14 @@ const ProductForm = ({ email }) => {
                             multiple
                             onChange={handleImageChange}
                             required
-                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 claymorphism-input"
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-3 text-lg text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                        className="w-full py-3 text-lg text-white bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                     >
-                        Add Product
+                        Submit
                     </button>
                 </form>
             </div>

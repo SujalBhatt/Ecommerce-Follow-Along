@@ -28,11 +28,16 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600">
+    <div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat w-full"
+      style={{
+        backgroundImage: "url('https://img.freepik.com/free-psd/shopping-vertical-background_23-2150409471.jpg?semt=ais_hybrid')",
+      }}
+    >
       <div className="container mx-auto p-8">
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-extrabold text-white">Welcome to Our Store</h1>
-          <p className="text-lg text-gray-200 mt-4">Discover the best products at unbeatable prices</p>
+        <header className="text-center mb-12 bg-purple-100 p-6 rounded-3xl shadow-md w-full max-w-3xl mx-auto">
+          <h1 className="text-5xl font-extrabold text-gray-800">Welcome to Our Store</h1>
+          <p className="text-lg text-gray-600 mt-4">Discover the best products at unbeatable prices</p>
         </header>
         <div className="text-center mb-8">
           <Link to="/form" className="text-white text-lg font-medium bg-purple-500 hover:bg-purple-700 px-5 py-3 rounded-lg transition-all duration-200">

@@ -1,0 +1,14 @@
+.claymorphism {
+    box-shadow: 9px 9px 16px #d1d9e6, -9px -9px 16px #ffffff;
+    border-radius: 20px;
+}
+
+.claymorphism-input {
+    box-shadow: inset 9px 9px 16px #d1d9e6, inset -9px -9px 16px #ffffff;
+    border-radius: 12px;
+}
+
+.claymorphism-button {
+    box-shadow: 9px 9px 16px #d1d9e6, -9px -9px 16px #ffffff;
+    border-radius: 12px;
+}

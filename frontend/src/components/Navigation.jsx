@@ -5,7 +5,7 @@ const Navigation = () => {
     const userEmail = "vimlabhatt97@gmail.com"; // Replace with the actual user email
 
     return (
-        <nav className="bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg">
+        <nav className="bg-purple-500">
             <div className="container mx-auto flex items-center justify-between px-8 py-5">
                 {/* Logo or Brand Name */}
                 <div className="text-white text-3xl font-extrabold">
